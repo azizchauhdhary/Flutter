@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,8 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bringVegitable();
     return MaterialApp(
       home: HomePage(),
     );
   }
+
+  bringVegitable({@required bool envelope = false, int rupees = 100}) {}
 }
