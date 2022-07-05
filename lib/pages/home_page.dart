@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("app"),
-        backgroundColor: Colors.green,
+        //backgroundColor: Colors.green,
       ),
       body: Center(
         child: Text("Welcome $day $month"),
