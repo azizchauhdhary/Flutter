@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -15,6 +17,7 @@ class LoginPage extends StatelessWidget {
           ),
           const SizedBox(
             height: 20.0,
+            // child: Text("Test"),
           ),
           const Text(
             "Login Page",
@@ -24,6 +27,47 @@ class LoginPage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             // textScaleFactor: 2.0,
+          ),
+          const SizedBox(
+            height: 20.0,
+            // child: Text("Test"),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 36),
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: const InputDecoration(
+                    hintText: "Enter User Name",
+                    labelText: "Username",
+                  ),
+                ),
+                const SizedBox(
+                  height: 5.0,
+                  // child: Text("Test"),
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                    hintText: "Enter Password",
+                    labelText: "Password",
+                  ),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                  // child: Text("Test"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print("Pakistan1");
+                    debugPrint("Pakistan2");
+                    log("Pakistan3");
+                  },
+                  style: TextButton.styleFrom(),
+                  child: const Text("Login"),
+                ),
+              ],
+            ),
           ),
         ],
       ),
