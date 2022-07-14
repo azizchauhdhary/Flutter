@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -15,6 +16,10 @@ class MyApp extends StatelessWidget {
     bringVegitable(envelope: true, rupees: 50);
     return MaterialApp(
       // home: HomePage(),
+
+      // remove debug banner
+      debugShowCheckedModeBanner: false,
+
       themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
@@ -24,11 +29,11 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         // primarySwatch: Colors.deepPurple,
       ),
-      initialRoute: "/login",
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/": (context) => LoginPage(),
-        "/login": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
       },
     );
   }
